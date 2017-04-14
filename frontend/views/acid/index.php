@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div id="main"></div>
 
     <?= Html::jsFile('@web/assets/95a712d5/jquery.min.js') ?>
-    <?= Html::jsFile('@web/assets/echarts/echarts.min.js') ?>
+    <?= Html::jsFile('@web/echarts/echarts.min.js') ?>
 
     <script>
 
