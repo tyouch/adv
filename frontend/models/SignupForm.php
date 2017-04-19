@@ -12,6 +12,8 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $repassword;
+    public $verifyCode;
 
 
     /**
@@ -23,7 +25,8 @@ class SignupForm extends Model
             ['username', 'trim'],
             ['username', 'required'],
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['username', 'string', 'min' => 4, 'max' => 16], //2-255
+            ['username', 'match','pattern'=>'/^[(\x{4E00}-\x{9FA5})a-zA-Z]+[(\x{4E00}-\x{9FA5})a-zA-Z_\d]*$/u', 'message'=>'用户名由字母，汉字，数字，下划线组成，且不能以数字和下划线开头。'],
 
             ['email', 'trim'],
             ['email', 'required'],
@@ -33,6 +36,12 @@ class SignupForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+
+            [['password','repassword'], 'required'],
+            [['password','repassword'], 'string', 'min' => 6],
+            ['repassword', 'compare', 'compareAttribute' => 'password','message'=>'两次输入的密码不一致！'],
+
+            ['verifyCode', 'captcha'],
         ];
     }
 

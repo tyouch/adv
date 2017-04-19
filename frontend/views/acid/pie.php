@@ -24,8 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-<?= Html::jsFile('@web/assets/95a712d5/jquery.min.js') ?>
-<?= Html::jsFile('@web/echarts/echarts.min.js') ?>
+<?= Html::jsFile('@web/statics/js/jquery.min.js') ?>
+<?= Html::jsFile('@web/statics/js/echarts.min.js') ?>
 <script>
 
     // 1

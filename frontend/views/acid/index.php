@@ -21,8 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div id="main"></div>
 
-    <?= Html::jsFile('@web/assets/95a712d5/jquery.min.js') ?>
-    <?= Html::jsFile('@web/echarts/echarts.min.js') ?>
+    <?= Html::jsFile('@web/statics/js/jquery.min.js') ?>
+    <?= Html::jsFile('@web/statics/js/echarts.min.js') ?>
 
     <script>
 
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
         });
 
         myChart.showLoading();
-        $.get("<?= Url::base().'/assets/echarts/world.json';?>", function (worldJson) {
+        $.get("<?= Url::base().'/statics/js/world.json';?>", function (worldJson) {
             myChart.hideLoading();
             echarts.registerMap('world', worldJson); // 注册
 

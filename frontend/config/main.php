@@ -36,14 +36,32 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'suffix' => '.html', //
             'rules' => [
             ],
         ],
-        */
+        'i18n' => [
+            'translations' => [
+                'common' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'common' => 'common.php',
+                    ],
+                ],
+                'power' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'power' => 'power.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
