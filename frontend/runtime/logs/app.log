@@ -1,0 +1,2107 @@
+2017-04-14 16:45:25 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#16 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#17 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#18 [internal function]: frontend\controllers\CountryController->actionIndex()
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#14 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#15 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#16 [internal function]: frontend\controllers\CountryController->actionIndex()
+#17 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#18 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-04-14 16:45:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'country/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => 'e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5\";}'
+    'advanced-frontend' => '0lbv7klobdmm8vgcmb55c4pu04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5%22%3B%7D; advanced-frontend=0lbv7klobdmm8vgcmb55c4pu04'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '15589'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=country%2Findex'
+    'REQUEST_URI' => '/adv/frontend/web/index.php?r=country%2Findex'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492159524.669
+    'REQUEST_TIME' => 1492159524
+]
+2017-04-14 16:45:41 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#16 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#17 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#18 [internal function]: frontend\controllers\CountryController->actionIndex()
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#14 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#15 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#16 [internal function]: frontend\controllers\CountryController->actionIndex()
+#17 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#18 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-04-14 16:45:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'country/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => 'e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5\";}'
+    'advanced-frontend' => '0lbv7klobdmm8vgcmb55c4pu04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5%22%3B%7D; advanced-frontend=0lbv7klobdmm8vgcmb55c4pu04'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '15606'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=country%2Findex'
+    'REQUEST_URI' => '/adv/frontend/web/index.php?r=country%2Findex'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492159541.596
+    'REQUEST_TIME' => 1492159541
+]
+2017-04-14 16:45:43 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#16 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#17 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#18 [internal function]: frontend\controllers\CountryController->actionIndex()
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#14 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#15 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#16 [internal function]: frontend\controllers\CountryController->actionIndex()
+#17 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#18 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-04-14 16:45:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'country/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => 'e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5\";}'
+    'advanced-frontend' => '0lbv7klobdmm8vgcmb55c4pu04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5%22%3B%7D; advanced-frontend=0lbv7klobdmm8vgcmb55c4pu04'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '15607'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=country%2Findex'
+    'REQUEST_URI' => '/adv/frontend/web/index.php?r=country%2Findex'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492159542.955
+    'REQUEST_TIME' => 1492159542
+]
+2017-04-14 16:46:04 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#16 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#17 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#18 [internal function]: frontend\controllers\CountryController->actionIndex()
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#14 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#15 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#16 [internal function]: frontend\controllers\CountryController->actionIndex()
+#17 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#18 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-04-14 16:46:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'country/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => 'e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5\";}'
+    'advanced-frontend' => '0lbv7klobdmm8vgcmb55c4pu04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/index.php?r=test%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5%22%3B%7D; advanced-frontend=0lbv7klobdmm8vgcmb55c4pu04'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '15625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=country%2Findex'
+    'REQUEST_URI' => '/adv/frontend/web/index.php?r=country%2Findex'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492159564.445
+    'REQUEST_TIME' => 1492159564
+]
+2017-04-14 16:46:08 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#16 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#17 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#18 [internal function]: frontend\controllers\CountryController->actionIndex()
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: NON)' in D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare('<span class="ke...')
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(199): yii\db\Command->queryAll()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\db\mysql\Schema.php(98): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\db\Schema.php(152): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(330): yii\db\Schema->getTableSchema('<span class="st...')
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\db\ActiveRecord.php(364): yii\db\ActiveRecord::getTableSchema()
+#10 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(464): yii\db\ActiveRecord->attributes()
+#11 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(280): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 D:\wamp\www\adv\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(frontend\models\CountrySearch), '[<span class="s...')
+#14 D:\wamp\www\adv\frontend\models\CountrySearch.php(54): yii\base\Model->validate()
+#15 D:\wamp\www\adv\frontend\controllers\CountryController.php(39): frontend\models\CountrySearch->search('[<span class="s...')
+#16 [internal function]: frontend\controllers\CountryController->actionIndex()
+#17 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#18 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2017-04-14 16:46:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'country/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => 'e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5\";}'
+    'advanced-frontend' => '0lbv7klobdmm8vgcmb55c4pu04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/index.php?r=test%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=e955a93c13d556ca9b81fe1739b91b48ece2098ceaf08637a10632b2475cfc51a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22DGgiafSEYWOfCcjdpzCz97Q6JpBJ6Rw5%22%3B%7D; advanced-frontend=0lbv7klobdmm8vgcmb55c4pu04'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '15628'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=country%2Findex'
+    'REQUEST_URI' => '/adv/frontend/web/index.php?r=country%2Findex'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492159568.373
+    'REQUEST_TIME' => 1492159568
+]
+2017-04-19 11:01:40 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:01:40 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '6795'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492570900.009
+    'REQUEST_TIME' => 1492570900
+]
+2017-04-19 11:01:44 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:01:44 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '6813'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492570904.232
+    'REQUEST_TIME' => 1492570904
+]
+2017-04-19 11:01:49 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:01:49 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '6819'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492570909.817
+    'REQUEST_TIME' => 1492570909
+]
+2017-04-19 11:07:47 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:07:47 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '6972'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492571267.26
+    'REQUEST_TIME' => 1492571267
+]
+2017-04-19 11:14:51 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:14:50 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7158'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492571690.978
+    'REQUEST_TIME' => 1492571690
+]
+2017-04-19 11:14:54 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:14:54 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7182'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492571694.295
+    'REQUEST_TIME' => 1492571694
+]
+2017-04-19 11:18:06 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:18:06 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7273'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492571886.746
+    'REQUEST_TIME' => 1492571886
+]
+2017-04-19 11:18:47 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 11:18:47 [127.0.0.1][1][opotihv1cnr1rliihs00t38dl5][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'opotihv1cnr1rliihs00t38dl5'
+    '_identity-frontend' => 'bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"5IWTHdGBFU9yQo6oshdhSAwT9teUBePi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__captcha/site/captcha' => 'eojqts'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=opotihv1cnr1rliihs00t38dl5; _identity-frontend=bee90430ddc094d3fc8a2b8ff63ad2cf38b591f1c9b107ee8197baf8e2858cbba%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%225IWTHdGBFU9yQo6oshdhSAwT9teUBePi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7300'
+    'REDIRECT_URL' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/assets/95a712d5/jquery.min.js'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492571927.833
+    'REQUEST_TIME' => 1492571927
+]
+2017-04-19 11:32:21 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:20 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7721'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572740.848
+    'REQUEST_TIME' => 1492572740
+]
+2017-04-19 11:32:22 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:22 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7723'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572742.192
+    'REQUEST_TIME' => 1492572742
+]
+2017-04-19 11:32:22 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:22 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7725'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572742.904
+    'REQUEST_TIME' => 1492572742
+]
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7727'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572743.403
+    'REQUEST_TIME' => 1492572743
+]
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7728'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572743.601
+    'REQUEST_TIME' => 1492572743
+]
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:23 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7729'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572743.8
+    'REQUEST_TIME' => 1492572743
+]
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7730'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572744.023
+    'REQUEST_TIME' => 1492572744
+]
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7731'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572744.417
+    'REQUEST_TIME' => 1492572744
+]
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Captcha' not found' in D:\wamp\www\adv\frontend\views\site\signup.php:29
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#3 D:\wamp\www\adv\frontend\controllers\SiteController.php(162): yii\base\Controller->render()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#9 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2017-04-19 11:32:24 [127.0.0.1][-][narqafhml6hck1t0qumhp7j0b0][info][application] $_COOKIE = [
+    '_csrf-frontend' => '01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7qM32aAJGB480z4VJ-PnLVuo9EfFWCzs\";}'
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/site/login.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf-frontend=01974c16708753a8b03de6c17802de783bb6ed0e9184d7f61d8fbad16d7152d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227qM32aAJGB480z4VJ-PnLVuo9EfFWCzs%22%3B%7D; advanced-frontend=narqafhml6hck1t0qumhp7j0b0'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '7732'
+    'REDIRECT_URL' => '/adv/frontend/web/site/signup.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/site/signup.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492572744.603
+    'REQUEST_TIME' => 1492572744
+]
+2017-04-19 17:56:27 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\wamp\www\adv\vendor\yiisoft\yii2\web\Request.php:193
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2017-04-19 17:56:27 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'narqafhml6hck1t0qumhp7j0b0'
+    '_csrf_backend' => 'HF1oVibWn9tCkOjqAWOBFd9Q11nWEnyG'
+    'advanced-backend' => 'k8qljfc6s2agpra2v1h5m566f3'
+    '_csrf-frontend' => '5ee4d94a08fe19ebac6a8de7962e12faed400d332eba257e48529bd78112d99aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"BUMhQGOD9pRGQOD-GHUz5Vuqv4g-GbdW\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'SWpadDJZUE8LPxccYx4fC3AaCDNjFhRiDiIPDgcPJT4/Xj1ZdTs0GA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/index.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=narqafhml6hck1t0qumhp7j0b0; _csrf_backend=HF1oVibWn9tCkOjqAWOBFd9Q11nWEnyG; advanced-backend=k8qljfc6s2agpra2v1h5m566f3; _csrf-frontend=5ee4d94a08fe19ebac6a8de7962e12faed400d332eba257e48529bd78112d99aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22BUMhQGOD9pRGQOD-GHUz5Vuqv4g-GbdW%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '20976'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/<'
+    'REDIRECT_QUERY_STRING' => '=%20Url::base().%27/statics/js/world.json%27;?%3E'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '=%20Url::base().%27/statics/js/world.json%27;?%3E'
+    'REQUEST_URI' => '/adv/frontend/web/acid/%3C?=%20Url::base().%27/statics/js/world.json%27;?%3E'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492595787.405
+    'REQUEST_TIME' => 1492595787
+]
+2017-04-20 14:13:14 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'inet_ntop(): Invalid in_addr value' in D:\wamp\www\adv\frontend\controllers\AcidController.php:40
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\AcidController->actionIndex()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#6 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2017-04-20 14:13:14 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10028'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492668794.572
+    'REQUEST_TIME' => 1492668794
+]
+2017-04-20 14:13:24 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'inet_ntop(): Invalid in_addr value' in D:\wamp\www\adv\frontend\controllers\AcidController.php:40
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\AcidController->actionIndex()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#6 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2017-04-20 14:13:24 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10032'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492668804.534
+    'REQUEST_TIME' => 1492668804
+]
+2017-04-20 15:03:37 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Acid_event::classtype' in D:\wamp\www\adv\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('classtype')
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Model.php(983): yii\db\BaseActiveRecord->__get('classtype')
+#2 D:\wamp\www\adv\frontend\controllers\AcidController.php(52): yii\base\Model->offsetGet('classtype')
+#3 [internal function]: frontend\controllers\AcidController->actionIndex()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('acid/index', Array)
+#8 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2017-04-20 15:03:37 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10828'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492671817.114
+    'REQUEST_TIME' => 1492671817
+]
+2017-04-20 15:05:59 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Acid_event::classtype' in D:\wamp\www\adv\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('classtype')
+#1 D:\wamp\www\adv\frontend\controllers\AcidController.php(52): yii\db\BaseActiveRecord->__get('classtype')
+#2 [internal function]: frontend\controllers\AcidController->actionIndex()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('acid/index', Array)
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-04-20 15:05:58 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10862'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492671958.92
+    'REQUEST_TIME' => 1492671958
+]
+2017-04-20 15:06:42 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Acid_event::classtype' in D:\wamp\www\adv\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('classtype')
+#1 D:\wamp\www\adv\frontend\controllers\AcidController.php(52): yii\db\BaseActiveRecord->__get('classtype')
+#2 [internal function]: frontend\controllers\AcidController->actionIndex()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('acid/index', Array)
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-04-20 15:06:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10880'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492672002.36
+    'REQUEST_TIME' => 1492672002
+]
+2017-04-20 15:07:27 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Acid_event::classtype' in D:\wamp\www\adv\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('classtype')
+#1 D:\wamp\www\adv\frontend\controllers\AcidController.php(52): yii\db\BaseActiveRecord->__get('classtype')
+#2 [internal function]: frontend\controllers\AcidController->actionIndex()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('acid/index', Array)
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-04-20 15:07:27 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10891'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492672047.369
+    'REQUEST_TIME' => 1492672047
+]
+2017-04-20 15:07:29 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Acid_event::classtype' in D:\wamp\www\adv\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('classtype')
+#1 D:\wamp\www\adv\frontend\controllers\AcidController.php(52): yii\db\BaseActiveRecord->__get('classtype')
+#2 [internal function]: frontend\controllers\AcidController->actionIndex()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('acid/index', Array)
+#7 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2017-04-20 15:07:29 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '10893'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492672049.184
+    'REQUEST_TIME' => 1492672049
+]
+2017-04-20 15:16:45 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ')', expecting ']'' in D:\wamp\www\adv\frontend\controllers\AcidController.php:72
+Stack trace:
+#0 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(633): ::spl_autoload_call()
+#1 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(633): ::class_exists()
+#2 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(591): yii\base\Module->createControllerByID()
+#3 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Module.php(517): yii\base\Module->createController()
+#4 D:\wamp\www\adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#5 D:\wamp\www\adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#6 D:\wamp\www\adv\frontend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2017-04-20 15:16:45 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-frontend' => 'g582na6c2chn0p46amk2fchlc3'
+    '_csrf-frontend' => '99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://127.0.0.1/adv/frontend/web/acid/pie.html'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g582na6c2chn0p46amk2fchlc3; _csrf-frontend=99138acd4a6b0b13dfcbb1d8d8aa57acd5cade62075f49809327dd7c6e6881cfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22UMbMBtWCQ2418KbAaMncNmqa0xE8KPuY%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\VanDyke Software\\Clients\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_80\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\MongoDB\\Server\\3.2\\bin;D:\\wamp\\bin\\php\\php5.6.19;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/5.6.19 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/5.6.19'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/adv/frontend/web/index.php'
+    'REMOTE_PORT' => '11068'
+    'REDIRECT_URL' => '/adv/frontend/web/acid/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/adv/frontend/web/acid/index.html'
+    'SCRIPT_NAME' => '/adv/frontend/web/index.php'
+    'PHP_SELF' => '/adv/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492672605.451
+    'REQUEST_TIME' => 1492672605
+]

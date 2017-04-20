@@ -13,7 +13,11 @@ use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use frontend\models\Members;
 use frontend\models\Acid_event;
+
 use common\helpers\CommonHelper;
+use common\helpers\Geoiprecord;
+use common\helpers\Geoipdnsrecord;
+use common\helpers\Geoipcity;
 
 class AcidController extends Controller
 {
@@ -29,10 +33,43 @@ class AcidController extends Controller
             ->all();
 
         //var_dump($acid);exit;
+        //$gi = Geoipcity::geoip_open('public/data/asset/geo/GeoIPCity.dat', GEOIP_STANDARD);
+        //Geoipcity::GeoIP_record_by_addr($gi, $d['ip_src']);
+        //var_dump(geoip_record_by_name('63.149.98.23'));exit;
+
+        $geoCoordMap = ['郑州' => array(113.4668, 34.6234)]; $c = 0;
+        foreach ($acid as $ac) {
+            //var_dump($ac); exit;
+            $res = geoip_record_by_name(@inet_ntop($ac->ip_src));
+            //var_dump($res);exit;
+            if(isset($res['country_code3'])  && $res['country_code3'] != "CHN"){
+                //var_dump($res);
+                //$res->city = $res->region=='QC'?'Quebec':$res->city; // 特殊处理 魁北克 Qu�bec
+                //$res->city = $res->region=='34'?'Bogota':$res->city; // 特殊处理 圣菲波哥大 Bogot�
+                $city = empty($res['city']) ? $res['country_name'] : $res['city'];//'Unknown';//$res->country_name
+                $geoCoordMap[$city] = [$res['longitude'], $res['latitude']];
+                $zzData[] = [
+                    ['name'=>'郑州'],
+                    ['name'=>$city, 'value'=>80, 'ip_src'=>@inet_ntop($ac->ip_src), 'ip_dst'=>@inet_ntop($ac->ip_dst), 'classtype'=>'zy'], //$ac->classtype
+                ];
+                //$tbData[] = $ac;
+                if(($c++) >= 9) {
+                    //var_dump($c);exit;
+                    break;
+                }
+
+            }
+
+        }
+        //var_dump($geoCoordMap, $zzData); //, json_encode($tbData, true)
+        //var_dump(json_encode($geoCoordMap), json_encode($zzData)); //, json_encode($tbData, true)
+        //exit;
 
         return $this->render('index', [
             'title' => 'ACID列表',
             'mydb'  => $acid,
+            'geoCoordMap'  => json_encode($geoCoordMap),
+            'zzData'  => json_encode($zzData),
         ]);
     }
 

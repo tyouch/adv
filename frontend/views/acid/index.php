@@ -21,38 +21,48 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div id="main"></div>
 
-    <?= Html::jsFile('@web/statics/js/jquery.min.js') ?>
-    <?= Html::jsFile('@web/statics/js/echarts.min.js') ?>
+    <?//= Html::jsFile('@web/statics/js/jquery.min.js') ?>
+    <?//= Html::jsFile('@web/statics/js/echarts.min.js') ?>
 
-    <script>
+    <script></script>
+
+</div>
+
+
+<script> // <!-- 编写script标签是为了编辑器识别js代码，可以省略 -->
+    <?php $this->beginBlock('js_end') ?>
+
+        $(window).on('resize',function(){
+            // 调用相关echarts的resize方法. ** 放在echart声明之后
+            myChart.resize();
+        });
 
         /*function timer() {
-            $.ajax({
-                Type        : 'GET',
-                DataType    : 'JSON',
-                Data        : {},
-                url         : '',
-                success     : function (d, s) {
-                    console.log(d);
-                }
-            });
-        }
-        var timer1 = setInterval(timer, 5000); //*/
-
+         $.ajax({
+         Type        : 'GET',
+         DataType    : 'JSON',
+         Data        : {},
+         url         : '',
+         success     : function (d, s) {
+         console.log(d);
+         }
+         });
+         }
+         var timer1 = setInterval(timer, 5000); //*/
 
         var myChart = echarts.init(document.getElementById('main'));
 
-        $(function () {
-         /*$(".tra").click(function (e) {
-                //alert($(this).attr('data-id'));
-                location.href = '';
-            });*/
+        /*$(function () {
+         $(".tra").click(function (e) {
+         //alert($(this).attr('data-id'));
+         location.href = '';
+         });
 
-            $(window).on('resize',function(){
-                // 调用相关echarts的resize方法. ** 放在echart声明之后
-                myChart.resize();
-            })
-        });
+         $(window).on('resize',function(){
+         // 调用相关echarts的resize方法. ** 放在echart声明之后
+         myChart.resize();
+         })
+         });*/
 
         myChart.showLoading();
         $.get("<?= Url::base().'/statics/js/world.json';?>", function (worldJson) {
@@ -239,43 +249,43 @@ $this->params['breadcrumbs'][] = $this->title;
                 'Zimbabwe':'津巴布韦'
             };
 
-            var geoCoordMap = {
-             '郑州': [113.4668, 34.6234],
-             '华盛顿': [-77.0214, 38.5355],
-             '渥太华': [-73.58, 45.20],
-             '里约热内卢': [-43.15, -22.54],
-             '东京': [139.44, 35.41],
-             '平壤': [125.47, 39],
-             '首尔': [127.03, 37.35],
-             '柏林': [13.2, 52.31],
-             '莫斯科': [37.37, 55.45],
-             '利雅得': [46.44, 24.39],
-             '新德里': [77.13, 28.37],
-             '马尼拉': [121, 14.37],
-             '雅加达': [106.45, -6.08],
-             '河内': [105.53, 21.01],
-             '悉尼': [151.17, -33.55],
-             };
+            /*var geoCoordMap = {
+                '郑州': [113.4668, 34.6234],
+                '华盛顿': [-77.0214, 38.5355],
+                '渥太华': [-73.58, 45.20],
+                '里约热内卢': [-43.15, -22.54],
+                '东京': [139.44, 35.41],
+                '平壤': [125.47, 39],
+                '首尔': [127.03, 37.35],
+                '柏林': [13.2, 52.31],
+                '莫斯科': [37.37, 55.45],
+                '利雅得': [46.44, 24.39],
+                '新德里': [77.13, 28.37],
+                '马尼拉': [121, 14.37],
+                '雅加达': [106.45, -6.08],
+                '河内': [105.53, 21.01],
+                '悉尼': [151.17, -33.55],
+            };
 
-             var ZZData = [
-             [{name: '郑州'}, {name: '华盛顿', value: 85}],
-             [{name: '郑州'}, {name: '渥太华', value: 85}],
-             [{name: '郑州'}, {name: '里约热内卢', value: 85}],
-             [{name: '郑州'}, {name: '东京', value: 55}],
-             [{name: '郑州'}, {name: '平壤', value: 10}],
-             [{name: '郑州'}, {name: '首尔', value: 10}],
-             [{name: '郑州'}, {name: '柏林', value: 50}],
-             [{name: '郑州'}, {name: '莫斯科', value: 85}],
-             [{name: '郑州'}, {name: '利雅得', value: 65}],
-             [{name: '郑州'}, {name: '新德里', value: 85}],
-             [{name: '郑州'}, {name: '马尼拉', value: 40}],
-             [{name: '郑州'}, {name: '雅加达', value: 85}],
-             [{name: '郑州'}, {name: '河内', value: 10}],
-             [{name: '郑州'}, {name: '悉尼', value: 65}],
-             ];
+            var ZZData = [
+                [{name: '郑州'}, {name: '华盛顿', value: 85}],
+                [{name: '郑州'}, {name: '渥太华', value: 85}],
+                [{name: '郑州'}, {name: '里约热内卢', value: 85}],
+                [{name: '郑州'}, {name: '东京', value: 55}],
+                [{name: '郑州'}, {name: '平壤', value: 10}],
+                [{name: '郑州'}, {name: '首尔', value: 10}],
+                [{name: '郑州'}, {name: '柏林', value: 50}],
+                [{name: '郑州'}, {name: '莫斯科', value: 85}],
+                [{name: '郑州'}, {name: '利雅得', value: 65}],
+                [{name: '郑州'}, {name: '新德里', value: 85}],
+                [{name: '郑州'}, {name: '马尼拉', value: 40}],
+                [{name: '郑州'}, {name: '雅加达', value: 85}],
+                [{name: '郑州'}, {name: '河内', value: 10}],
+                [{name: '郑州'}, {name: '悉尼', value: 65}],
+            ];*/
 
-            //var geoCoordMap = <?php echo $geoCoordMap;?>;
-            //var ZZData = <?php echo $zzData;?>;
+            var geoCoordMap = <?= $geoCoordMap ?>;
+            var ZZData = <?= $zzData ?>;
 
             // var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
 
@@ -522,6 +532,19 @@ $this->params['breadcrumbs'][] = $this->title;
             myChart.setOption(option);
         });
 
-    </script>
+    <?php $this->endBlock(); ?>
+</script>
+<?php $this->registerJs($this->blocks['js_end'], \yii\web\View::POS_END); // 将编写的js代码注册到页面底部 ?>
 
-</div>
+
+<?php
+/*$js = <<<JS
+
+    $(window).on('resize',function(){
+        // 调用相关echarts的resize方法. ** 放在echart声明之后
+        myChart.resize();
+    })
+
+JS;
+$this->registerJs($js);*/
+?>

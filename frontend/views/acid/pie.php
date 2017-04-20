@@ -24,65 +24,68 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-<?= Html::jsFile('@web/statics/js/jquery.min.js') ?>
-<?= Html::jsFile('@web/statics/js/echarts.min.js') ?>
-<script>
 
-    // 1
-    var myChart = echarts.init(document.getElementById('main'));
+<script> // <!-- 编写script标签是为了编辑器识别js代码，可以省略 -->
+    <?php $this->beginBlock('js_end') ?>
 
-    // 2
-    $(function () {
-        $(window).on('resize',function(){
-            // 调用相关echarts的resize方法. ** 放在echart声明之后
-            myChart.resize();
-        })
-    });
+        // 1
+        var myChart = echarts.init(document.getElementById('main'));
 
-    // 3
-    option = {
-        title : {
-            text: '<?= Html::encode($title1) ?>',
-            subtext: '纯属虚构',
-            x:'center'
-        },
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            //orient: 'vertical',
-            //left: 'left',
-            //data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-        },
-        //color:['#9bcb62','#f3a43b','#60c0de','#974da9','#b6c434','#ff8463'],
-        //backgroundColor: '#323c48',
-        series : [
-            {
-                name: '访问来源',
-                type: 'pie',
-                selectedMode: 'single',
-                radius : '55%',
-                center: ['50%', '60%'],
-                data:<?= $data?>,
-                /*data:[
-                    {value:335, name:'直接访问'},
-                    {value:310, name:'邮件营销'},
-                    {value:234, name:'联盟广告'},
-                    {value:135, name:'视频广告'},
-                    {value:1548, name:'搜索引擎'}
-                ],*/
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+        // 2
+        $(function () {
+            $(window).on('resize',function(){
+                // 调用相关echarts的resize方法. ** 放在echart声明之后
+                myChart.resize();
+            })
+        });
+
+        // 3
+        option = {
+            title : {
+                text: '<?= Html::encode($title1) ?>',
+                subtext: '纯属虚构',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                //orient: 'vertical',
+                //left: 'left',
+                //data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+            },
+            //color:['#9bcb62','#f3a43b','#60c0de','#974da9','#b6c434','#ff8463'],
+            //backgroundColor: '#323c48',
+            series : [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:<?= $data?>,
+                    /*data:[
+                     {value:335, name:'直接访问'},
+                     {value:310, name:'邮件营销'},
+                     {value:234, name:'联盟广告'},
+                     {value:135, name:'视频广告'},
+                     {value:1548, name:'搜索引擎'}
+                     ],*/
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
                     }
                 }
-            }
-        ]
-    };
+            ]
+        };
 
-    // 4
-    myChart.setOption(option);
+        // 4
+        myChart.setOption(option);
+    <?php $this->endBlock(); ?>
 </script>
+
+<?php $this->registerJs($this->blocks['js_end'], \yii\web\View::POS_END); // 将编写的js代码注册到页面底部 ?>
